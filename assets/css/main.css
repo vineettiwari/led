@@ -3318,7 +3318,7 @@
 					}
 
 					#nav ul li a.active {
-						background-color: #ffffff;
+						background-color: rgba(255, 255, 255, 1.0);
 						box-shadow: none;
 					}
 
@@ -3797,5 +3797,14 @@
 			#wrapper {
 				max-width: 100%;
 			}
+}
 
-		}
+/************ MY CSS ************/
+#neema-img {
+	/*min-height: 5em;*/
+	width: 200px;
+	height: 200px;
+	background-position: 0 35%;
+	background-image: url("../../images/mom.jpg");
+	background-size: cover;
+}

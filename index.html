@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Untitled</title>
+		<title>LEd | Home</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -20,20 +20,25 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Stellar</h1>
-						<p>Erat commodo augue, felis accumsan quis eleifend<br />
-						risus ut primis sed Accumsan.</p>
+					<header id="header" class="alt index-header">
+						<div id="header-content">
+							<span class="logo"><img id="led-logo" src="images/led-logo.svg" alt="Company Logo" /></span>
+							<h1>Lifelong Education Center</h1>
+							<p>Learning Today For A Better Tomorrow.</p>
+							<ul class="header-button actions">
+								<li><a href="generic.html" class="button special">Apply Now</a></li>
+								<li><a href="#intro" class="button">Learn More</a></li>
+							</ul>
+						</div>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">First Section</a></li>
-							<li><a href="#second">Second Section</a></li>
-							<li><a href="#cta">Get Started</a></li>
+							<li><a href="#intro" class="active">WHO WE ARE</a></li>
+							<li><a href="#first">WHAT WE DO</a></li>
+							<li><a href="#second">WHAT YOU WILL LEARN</a></li>
+							<li><a href="#cta">GET IN TOUCH</a></li>
 						</ul>
 					</nav>
 
@@ -45,7 +50,7 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Ipsum sed adipiscing</h2>
+											<h2>We Are</h2>
 										</header>
 										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
 										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
@@ -54,14 +59,15 @@
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>
 									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+									<!-- <span class="image"><img src="images/mom.jpg" alt="" /></span> -->
+									<span id="neema-img" class="image"></span>
 								</div>
 							</section>
 
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Magna veroeros</h2>
+									<h2>We Do</h2>
 								</header>
 								<ul class="features">
 									<li>
@@ -90,7 +96,7 @@
 						<!-- Second Section -->
 							<section id="second" class="main special">
 								<header class="major">
-									<h2>Ipsum consequat</h2>
+									<h2>You Will Learn</h2>
 									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
 									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
 								</header>
@@ -143,32 +149,34 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled.</p>
+						<div id="footer-content">
+							<section>
+								<h2>Aliquam sed mauris</h2>
+								<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+								<ul class="actions">
+									<li><a href="generic.html" class="button">Learn More</a></li>
+								</ul>
+							</section>
+							<section>
+								<h2>Etiam feugiat</h2>
+								<dl class="alt">
+									<dt>Address</dt>
+									<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+									<dt>Phone</dt>
+									<dd>(000) 000-0000 x 0000</dd>
+									<dt>Email</dt>
+									<dd><a href="#">information@untitled.tld</a></dd>
+								</dl>
+								<ul class="icons">
+									<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+								</ul>
+							</section>
+							<p class="copyright">&copy; Untitled.</p>
+						</div>
 					</footer>
 
 			</div>

@@ -17,9 +17,45 @@
 
 	$(function() {
 
+		var is_mobile = false;
 		var	$window = $(window),
 			$body = $('body'),
 			$main = $('#main');
+
+		// Check for mobile device
+			if( $('#nav').css('display')=='none') {
+				is_mobile = true;
+			}
+
+		// Add smooth scrolling to all links
+		$("a").on('click', function(event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+						event.preventDefault();
+
+					// Store hash
+			 			var hash = this.hash;
+
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (1000) specifies the number of milliseconds
+					// it takes to scroll to the specified area
+						if (is_mobile == false) {
+				 			$('html, body').animate({
+				 				scrollTop: $(hash).offset().top - 30}, 1000, function() {
+									// Add hash (#) to URL when done scrolling (default click behavior)
+										window.location.hash = hash;
+							});
+						} else {
+				 			$('html, body').animate({
+				 				scrollTop: $(hash).offset().top}, 1000, function() {
+									// Add hash (#) to URL when done scrolling (default click behavior)
+										window.location.hash = hash;
+							});
+						}
+				} // End if
+		});
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -40,6 +76,53 @@
 					skel.breakpoint('medium').active
 				);
 			});
+
+		var $header = $(".index-header");
+		var $headerContent = $("#header-content");
+		var headerHeight = window.innerHeight;
+		var headerContentTop = (headerHeight / 2) - ($headerContent.height() / 1.5);
+		var headerContentLeft = ($header.width() / 2) - ($headerContent.width() / 2);
+
+		$headerContent.css("position", "relative");
+
+		if (is_mobile == false) {
+			// Header
+				headerHeight = headerHeight - $("#nav").height() * 4;
+
+			// Header Content
+				headerContentTop = headerContentTop - $("#nav").height() * 2;
+
+			// Brand Name
+				$("#header-content h1").css({"font-size":"4.25rem"});
+
+			// Brand Tagline
+				$("#header-content p").css({"font-size":"1.65rem"})
+		} else {
+			// Mobile exclusive code
+				$("#wrapper").css({"max-width":"100%"});
+
+			// Header
+				$header.css({"padding":"0 10% 0 10%"});
+
+			// Footer
+				$("#footer").height(window.innerHeight - 40);
+				$("#footer").css({"padding":"0", "margin":"0"});
+				$("#footer-content").css({"padding":"8%", "margin":"0%"});
+		}
+
+	// Header
+		$header.height(headerHeight);
+
+	// Header Content
+		$headerContent.css("top", headerContentTop);
+		$headerContent.css("left", headerContentLeft);
+
+	// Brand Logo (Light Bulb Pen)
+		$brandLogo = $("#led-logo");
+		$brandLogo.css({"-webkit-filter":"sepia(0.5) brightness(2.0) invert(0%)", "filter":"sepia(0.5) brightness(2.0) invert(0%)"});
+
+	// Get Started Button
+		$(".header-button").css({"padding":"2rem 0 0 0"});
 
 		// Nav.
 			var $nav = $('#nav');
@@ -64,7 +147,9 @@
 					$nav_a
 						.scrolly({
 							speed: 1000,
-							offset: function() { return $nav.height(); }
+							offset: function() {
+								return $nav.height();
+							}
 						})
 						.on('click', function() {
 
